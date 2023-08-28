@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+alias ..="cd .."
+
+alias grep='grep --color=auto'
+alias less="less -r"
+
+alias ls="ls -CF --color=auto --block-size=MB"
+alias ll="ls -lisa --color=auto -a"
+alias lsl="ls -lhFA | less"
+alias mkdir="mkdir -pv"
+alias gh='history|grep'
+alias c=clear
+alias re='. redo'
