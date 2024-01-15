@@ -1,7 +1,6 @@
 timeshift
 timeshift-autosnap
 --END OF MINIMAL INSTALL--
-clementine
 github-desktop-bin
 waterfox-g4-bin
 qt5-styleplugins
@@ -11,4 +10,3 @@ autojump
 dxvk-bin
 huiontablet
 sddm-nordic-theme-git
-pulseeffects-legacy

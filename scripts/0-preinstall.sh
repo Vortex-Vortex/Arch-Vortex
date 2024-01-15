@@ -52,16 +52,16 @@ echo "
 
 umount -A --recursive /mnt
 sgdisk -Z ${DISK}
-if [[ -d "/sys/firmware/efi" ]]; then
-    sgdisk -a 2048 -o ${DISK}
-    sgdisk -n 1::+1M --typecode=1:ef02 ${DISK}
-    sgdisk -n 2::+300M --typecode=2:ef00 --change-name=2:'EFIBOOT' ${DISK}
-    sgdisk -n 3::-0 --typecode=3:8300 --change-name=3:'ROOT' ${DISK}
-else
-    sfdisk -X dos ${DISK}
-    sfdisk --delete ${DISK}
-    echo -e ',2G,swap\n,+,L\n' | sfdisk ${DISK}
+
+sgdisk -a 2048 -o ${DISK}
+sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' ${DISK}
+sgdisk -n 2::+300M --typecode=2:ef00 --change-name=2:'EFIBOOT' ${DISK}
+sgdisk -n 3::-0 --typecode=3:8300 --change-name=3:'ROOT' ${DISK}
+
+if [[ ! -d "/sys/firmware/efi" ]]; then
+    sgdisk -A 1:set:2 ${DISK}
 fi
+
 partprobe ${DISK}
 
 
