@@ -51,6 +51,7 @@ echo "
 -------------------------------------------------------------------------"
 
 umount -A --recursive /mnt
+wipefs -af ${DISK}
 sgdisk -Z ${DISK}
 
 sgdisk -a 2048 -o ${DISK}
@@ -73,7 +74,7 @@ echo "
 
 createsubvolumes () {
     for subvol in @ @home @var @tmp @.snapshots; do
-        echo "createsubvolules ${subvol}"
+        echo "createsubvolumes ${subvol}"
         btrfs subvolume create /mnt/${subvol}
     done
 }
@@ -120,8 +121,8 @@ else
 fi
 
 partition_mkfs () {
-    mkfs.vfat -F32 ${partition2}
-    mkfs.${FS} ${partition3}
+    mkfs.vfat -f -F32 ${partition2}
+    mkfs.${FS} -f ${partition3}
     mount ${partition3} /mnt
 }
 
