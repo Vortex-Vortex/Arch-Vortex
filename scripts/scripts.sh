@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 package_list () {
+    package_file="$1"
     packages=$(tr -s '\n' ' ' < $1)
 
     if [[ ${INSTALL_TYPE} == 'FULL' ]]; then
@@ -33,9 +34,11 @@ pkg_install () {
         echo "The following packages are invalid to install using pacman"
         echo "Please check spelling and availability on Arch repositories"
         echo "Packages: ${err_package}"
+        echo "Package File: $package_file"
         read -n 1 -s -r -p "press any key to enter nano and make changes needed on packages file..."
-        vim $package_file
-        package_list $package_file
+        nano "$package_file"
+        sleep 1
+        package_list "$package_file"
         pkg_install
     fi
     echo "Packages installed successfully"

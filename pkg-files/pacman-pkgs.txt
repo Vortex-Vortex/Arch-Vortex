@@ -1,3 +1,4 @@
+pacman-aapkg
 base-devel
 bash-completion
 firefox

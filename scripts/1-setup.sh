@@ -87,7 +87,7 @@ echo "
 -------------------------------------------------------------------------"
 
 package_list $HOME/$PROJECT_WD/pkg-files/pacman-pkgs.txt
-echo "INSTALLING: ${packages}"
+echo "Running PKG_INSTALL"
 pkg_install
 
 
