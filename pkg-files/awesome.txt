@@ -1,5 +1,13 @@
+alacritty
 awesome
-rofi
+feh
+i3lock
+pasystray4
 picom
+rofi
+translate-shell
+flameshot
+xcolor
+xclip
 --END OF MINIMAL INSTALL--
-pasystray
+alsa-utils
