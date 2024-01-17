@@ -35,8 +35,8 @@ pkg_install () {
         echo "Please check spelling and availability on Arch repositories"
         echo "Packages: ${err_package}"
         echo "Package File: $package_file"
-        read -n 1 -s -r -p "press any key to enter nano and make changes needed on packages file..."
-        nano "$package_file"
+        read -n 1 -s -r -p "press any key to enter vim and make changes needed on packages file..."
+        vim "$package_file"
         sleep 1
         package_list "$package_file"
         pkg_install
