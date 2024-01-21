@@ -22,6 +22,12 @@ xdg-utils
 xorg-server
 xterm
 --END OF MINIMAL INSTALL--
+upower
+colordiff
+redshift
+nemo-terminal
+shotwell
+translate-shell
 alacritty
 alsa-utils
 ark
