@@ -122,8 +122,8 @@ else
 fi
 
 partition_mkfs () {
-    mkfs.vfat -f -F32 ${partition2}
-    mkfs.${FS} -f ${partition3}
+    mkfs.vfat -F32 ${partition2}
+    mkfs.${FS} ${partition3}
     mount ${partition3} /mnt
 }
 

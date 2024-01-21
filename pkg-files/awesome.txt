@@ -12,4 +12,3 @@ xclip
 --END OF MINIMAL INSTALL--
 alsa-utils
 upower
-ttf-ms-fonts

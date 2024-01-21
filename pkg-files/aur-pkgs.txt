@@ -2,6 +2,7 @@ timeshift
 timeshift-autosnap
 --END OF MINIMAL INSTALL--
 github-desktop-bin
+ttf-ms-fonts
 waterfox-bin
 qt5-styleplugins
 epson-inkjet-printer-201601w
