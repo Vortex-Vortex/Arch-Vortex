@@ -52,8 +52,8 @@ echo "
 -------------------------------------------------------------------------"
 
 umount -A --recursive /mnt
-wipefs -af ${DISK}
 sgdisk -Z ${DISK}
+dd if=/dev/zero of=${DISK} bs=1M count=2
 
 sgdisk -a 2048 -o ${DISK}
 sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' ${DISK}
