@@ -16,8 +16,6 @@ Setting up mirrors for optimal download"
 
 source $CONFIGS_DIR/setup.conf
 
-cat "$CONFIGS_DIR/setup.conf"
-
 timedatectl set-ntp true
 pacman -S --noconfirm archlinux-keyring
 pacman -S --noconfirm --needed pacman-contrib terminus-font
