@@ -2,11 +2,10 @@ timeshift
 timeshift-autosnap
 --END OF MINIMAL INSTALL--
 github-desktop-bin
-waterfox-g4-bin
+waterfox-bin
 qt5-styleplugins
 epson-inkjet-printer-201601w
 jmtpfs
-autojump
 dxvk-bin
 huiontablet
 sddm-nordic-theme-git

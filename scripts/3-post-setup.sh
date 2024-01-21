@@ -109,26 +109,27 @@ echo "  Avahi enabled"
 
 
 
-echo "
--------------------------------------------------------------------------
-                      Customizing Environment
--------------------------------------------------------------------------"
+if [[ ${INSTALL_TYPE} == "FULL" ]]; then
+    echo "
+    -------------------------------------------------------------------------
+                          Customizing Environment
+    -------------------------------------------------------------------------"
 
-for file in $HOME/$PROJECT_WD/{arch-theming.tar.gz,arch-config.tar.gz}; do
-    tar -xzvf $file -C /home/$USERNAME
-done
-mv /home/$USERNAME/color-schemes /home/$USERNAME/.local/share/color-schemes
-mv /home/$USERNAME/nemo /home/$USERNAME/.local/share/nemo
-mkdir -v /home/$USERNAME/.wallpapers
-cp $HOME/$PROJECT_WD/pkg-files/wallpapers-pkgs.txt /home/$USERNAME/.wallpapers/
-while read url; do
-    wget "$url" -P /home/$USERNAME/.wallpapers/ > /dev/null &
-    if [[ $(jobs -r -p | wc -l) -ge 5 ]]; then
-        wait -n
-    fi; done < /home/$USERNAME/.wallpapers/wallpapers-pkgs.txt
+    for file in $HOME/$PROJECT_WD/{arch-theming.tar.gz,arch-config.tar.gz}; do
+        tar -xzvf $file -C /home/$USERNAME
+    done
+    mv /home/$USERNAME/color-schemes /home/$USERNAME/.local/share/color-schemes
+    mv /home/$USERNAME/nemo /home/$USERNAME/.local/share/nemo
+    mkdir -v /home/$USERNAME/.wallpapers
+    cp $HOME/$PROJECT_WD/pkg-files/wallpapers-pkgs.txt /home/$USERNAME/.wallpapers/
+    while read url; do
+        wget "$url" -P /home/$USERNAME/.wallpapers/ > /dev/null &
+        if [[ $(jobs -r -p | wc -l) -ge 5 ]]; then
+            wait -n
+        fi; done < /home/$USERNAME/.wallpapers/wallpapers-pkgs.txt
 
+fi
 chown -R $USERNAME /home/$USERNAME
-
 
 echo "
 -------------------------------------------------------------------------

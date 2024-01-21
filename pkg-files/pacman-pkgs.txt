@@ -22,12 +22,6 @@ xdg-utils
 xorg-server
 xterm
 --END OF MINIMAL INSTALL--
-upower
-colordiff
-redshift
-nemo-terminal
-shotwell
-translate-shell
 alacritty
 alsa-utils
 ark
@@ -39,7 +33,7 @@ bluez-utils
 btrfs-progs
 capitaine-cursors
 chromium
-code
+colordiff
 cups
 dialog
 dmidecode
@@ -47,13 +41,10 @@ dosfstools
 dust
 edk2-ovmf
 efibootmgr
-element-desktop
 exfat-utils
-fceux
 feh
 ffmpeg
 ffmpegthumbnailer
-filelight
 flameshot
 flex
 fzf
@@ -81,8 +72,10 @@ lxappearance
 lxqt-policykit
 mesa
 metasploit
+mpv
 mupdf
 ncftp
+nemo-terminal
 network-manager-applet
 nmap
 noto-fonts
@@ -95,14 +88,16 @@ numlockx
 obsidian
 os-prober
 p7zip
-pantheon-videos
 patch
 pavucontrol
 pdftk
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
 print-manager
-pycharm-community-edition
 python
-python-opencv
 python-pip
 qbittorrent
 qemu
@@ -112,7 +107,7 @@ rnote
 rsync
 scrcpy
 scrot
-shotcut
+shotwell
 skanlite
 skanpage
 songrec
@@ -126,10 +121,12 @@ tesseract-data-por
 texlive-binextra
 texlive-core
 texlive-latexrecommended
+translate-shell
 udisks2
 unarchiver
 unrar
 unzip
+upower
 usbguard
 usbutils
 v4l-utils
@@ -137,6 +134,7 @@ virt-manager
 which
 wine-mono
 winetricks
+wireplumber
 xbindkeys
 xclip
 xcolor

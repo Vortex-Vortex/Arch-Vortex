@@ -2,7 +2,7 @@ alacritty
 awesome
 feh
 i3lock
-pasystray4
+pasystray
 picom
 rofi
 translate-shell
