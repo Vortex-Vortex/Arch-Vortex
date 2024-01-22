@@ -140,6 +140,7 @@ wireplumber
 xbindkeys
 xclip
 xcolor
+xdotool
 xorg-xev
 xorg-xinit
 xorg-xkill
