@@ -53,9 +53,8 @@ echo "
 
 umount -A --recursive /mnt
 sgdisk -Z ${DISK}
-dd if=/dev/zero of=${DISK} bs=1M count=2
+sgdisk -a 2048 -o ${DISK}g
 
-sgdisk -a 2048 -o ${DISK}
 sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' ${DISK}
 sgdisk -n 2::+300M --typecode=2:ef00 --change-name=2:'EFIBOOT' ${DISK}
 sgdisk -n 3::-0 --typecode=3:8300 --change-name=3:'ROOT' ${DISK}
@@ -75,7 +74,7 @@ echo "
 
 createsubvolumes () {
     for subvol in @ @home @var @tmp @.snapshots; do
-        echo "createsubvolumes ${subvol}"
+        echo "create subvolume ${subvol}"
         btrfs subvolume create /mnt/${subvol}
     done
 }
@@ -83,7 +82,7 @@ createsubvolumes () {
 mount_subvol () {
     for subvol in home tmp var .snapshots; do
         echo "mount_subvol ${subvol}  |  ${1}"
-        mkdir /mnt/${subvol}
+        mkdir -p /mnt/${subvol}
         mount -o ${MOUNT_OPTIONS},subvol=@${subvol} ${1:-/dev/mapper/cryptroot} /mnt/${subvol}
     done
 }
@@ -123,8 +122,8 @@ fi
 
 partition_mkfs () {
     mkfs.vfat -F32 ${partition2}
-    mkfs.${FS} ${partition3}
-    mount ${partition3} /mnt
+    mkfs.${FS} ${partition3} -f
+    mount -t ${FS} ${partition3} /mnt
 }
 
 partition_luks_mkfs () {
@@ -156,7 +155,7 @@ fi
 
 
 mkdir -p /mnt/boot/EFI
-mount ${partition2} /mnt/boot/
+mount -t vfat ${partition2} /mnt/boot/
 
 
 if ! grep -qs '/mnt' /proc/mounts; then

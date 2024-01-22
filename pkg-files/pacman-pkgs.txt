@@ -66,6 +66,7 @@ jdk-openjdk
 kcalc
 keepassxc
 krita
+kruler
 ladspa
 lsp-plugins
 lxappearance
@@ -112,6 +113,7 @@ skanlite
 skanpage
 songrec
 swh-plugins
+system-config-printer
 tar
 telegram-desktop
 termdown
