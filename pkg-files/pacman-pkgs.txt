@@ -6,6 +6,7 @@ kscreen
 linux-headers
 man-db
 man-pages
+memtest86+-efi
 nano
 nemo
 neofetch
@@ -56,6 +57,7 @@ gptfdisk
 graphicsmagick
 gst-plugins-base
 gst-plugins-good
+gst-plugin-pipewire
 gvfs-mtp
 hdf5
 htop
@@ -68,9 +70,10 @@ keepassxc
 krita
 kruler
 ladspa
+libreoffice-still
 lsp-plugins
 lxappearance
-lxqt-policykit
+lxsession
 mesa
 metasploit
 mpv
@@ -97,6 +100,7 @@ pipewire-alsa
 pipewire-audio
 pipewire-jack
 pipewire-pulse
+pragha
 print-manager
 python
 python-pip
@@ -123,6 +127,8 @@ tesseract-data-por
 texlive-binextra
 texlive-core
 texlive-latexrecommended
+tor
+torbrowser-launcher
 translate-shell
 udisks2
 unarchiver

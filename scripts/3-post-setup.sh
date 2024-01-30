@@ -129,7 +129,6 @@ if [[ ${INSTALL_TYPE} == "FULL" ]]; then
         fi; done < /home/$USERNAME/.wallpapers/wallpapers-pkgs.txt
 
 fi
-chown -R $USERNAME /home/$USERNAME
 
 echo "
 -------------------------------------------------------------------------
@@ -143,6 +142,8 @@ if [[ ${DESKTOP_ENV} == "awesome" ]]; then
     sed -i '/@import/c\@import "/home/'$USERNAME'/.config/awesome/theme/sidebar.rasi"' /home/$USERNAME/.config/rofi/config.rasi
     chmod -R a=xrw /home/$USERNAME/.config/
 fi
+
+chown -R $USERNAME /home/$USERNAME
 
 #sed -i 's/SigLevel = Never/SigLevel    = Required DatabaseOptional/' /etc/pacman.conf
 #sed -i 's/#LocalFileSigLevel/LocalFileSigLevel/' /etc/pacman.conf
