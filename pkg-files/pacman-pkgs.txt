@@ -129,8 +129,6 @@ tesseract-data-por
 texlive-binextra
 texlive-core
 texlive-latexrecommended
-tor
-torbrowser-launcher
 translate-shell
 udisks2
 unarchiver
