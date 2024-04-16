@@ -1,6 +1,7 @@
 timeshift
 timeshift-autosnap
 --END OF MINIMAL INSTALL--
+cpulimit
 github-desktop-bin
 ttf-ms-fonts
 waterfox-bin
