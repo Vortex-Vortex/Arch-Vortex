@@ -8,6 +8,3 @@ waterfox-bin
 qt5-styleplugins
 epson-inkjet-printer-201601w
 jmtpfs
-dxvk-bin
-huiontablet
-sddm-nordic-theme-git

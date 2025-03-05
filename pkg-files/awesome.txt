@@ -5,6 +5,8 @@ i3lock
 pasystray
 picom
 rofi
+rofi-calc
+rofi-emoji
 translate-shell
 flameshot
 xcolor

@@ -19,7 +19,7 @@ source $CONFIGS_DIR/setup.conf
 timedatectl set-ntp true
 pacman -S --noconfirm archlinux-keyring
 pacman -S --noconfirm --needed pacman-contrib terminus-font
-sed -i 's/^#ParallelDownloads.*/ParallelDownloads = 8/' /etc/pacman.conf
+sed -i 's/^#ParallelDownloads.*/ParallelDownloads = 16/' /etc/pacman.conf
 pacman -S --noconfirm --needed reflector rsync grub
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 if [[ ${MIRROR} == "reflector" ]]; then
